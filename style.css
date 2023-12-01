@@ -1,0 +1,131 @@
+@import url(./assets/fonts/Judson-Bold.ttf);
+@import url(./assets/fonts/Judson-Italic.ttf);
+@import url(./assets/fonts/Judson-Regular.ttf);
+@import url(./assets/fonts/Lateef-Regular.ttf);
+
+@font-face {
+    font-family: Judson-Bold;
+    src: url(./assets/fonts/Judson-Bold.ttf);
+}
+@font-face {
+    font-family: Judson-Italic;
+    src: url(./assets/fonts/Judson-Italic.ttf);
+}
+@font-face {
+    font-family: Judson-Regular;
+    src: url(./assets/fonts/Judson-Regular.ttf);
+}
+@font-face {
+    font-family: Lateef-Regular;
+    src: url(./assets/fonts/Lateef-Regular.ttf);
+}
+
+:root {
+    --titulo-principal:  #ECA316;
+    --titulo-secundário: #2AC785;
+    --titulo-terciarios: #06002E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(15px, 70px) 1fr minmax(15px,70px);
+    background-color: #EDEDED;
+}
+
+body > * {
+    grid-column: 2 / 3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    font-family: Judson-Bold;
+    color: var(--titulo-terciarios);
+    text-transform: uppercase;
+    padding: .1rem .8rem;
+    border: 3px solid transparent;
+    font-size: 25.6px;
+    border-radius: 4px;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid var(--titulo-principal);
+    cursor: pointer;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+section.sec1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeArticle {
+    width: 100%;
+    height: 600px;
+    background-image: url(./assets/imgs/Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 25px;
+}
+
+.homeArticle > * {
+    grid-column: 2 / 3;
+}
+
+.blackBGHome {
+    background-color: rgba(0, 0, 0, 50%);
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackBGHome > * {
+    grid-column: 2 / 3;
+}
+
+.flexContent h1,
+.flexContent h2,
+.flexContent span,
+.flexContent p {
+    color: #EDEDED ;
+    filter: drop-shadow(2px, 4px, 10px,rgba(0,0,0,25%));
+    font-family: Judson-Regular;
+}
+
+.flexContent h1 {
+    font-size: 7rem;
+    font-family: Lateef-Regular, serif;
+    margin-bottom: -3rem;
+}
+
+.flexContent p {
+    font-size: 14px;
+}
+
+.flexContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
