@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Judson-Bold;
+    src: url(../assets/fonts/Judson-Bold.ttf);
+}
+@font-face {
+    font-family: Judson-Italic;
+    src: url(../assets/fonts/Judson-Italic.ttf);
+}
+@font-face {
+    font-family: Judson-Regular;
+    src: url(../assets/fonts/Judson-Regular.ttf);
+}
+@font-face {
+    font-family: Lateef-Regular;
+    src: url(../assets/fonts/Lateef-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(20px,70px) 1fr minmax(20px,70px);
+    background-color: #ededed;
+}
+
+body > * {
+    grid-column: 2 / 3;
+}
+
+header {
+    position: sticky;
+    top: 0%;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    font-family: Judson-Bold;
+    color: var(--titulo-terciarios);
+    text-transform: uppercase;
+    padding: .1rem .8rem;
+    border: 3px solid transparent;
+    font-size: 25.6px;
+    border-radius: 4px;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid var(--titulo-principal);
+    cursor: pointer;
+}
+
+.loginLi {
+    opacity: 0;
+    cursor: alias;
+}
+
+main {
+    background-image: url(../assets/imgs/Login\ background.jpg);
+    background-size: cover;
+}
+
+footer {
+    display: subgrid;
+    grid-template-columns: minmax(20px,210px) 1fr minmax(20px,210px);
+    background-color: #f0f0f0;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    bottom: 0%;
+    width: 100%;
+}
+
+footer > * {
+    grid-column: 2 / 3;
+}
+
+.flexContentFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.firstComponent, 
+.secondComponent,
+.thirdComponent,
+.fourthComponent {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.firstComponent {
+    grid-column: 1 / 2;
+}
+
+.secondComponent{
+    grid-column: 2 / 3;
+}
+
+.thirdComponent{
+    grid-column: 3 / 4;
+}
+
+.fourthComponent{
+    grid-column: 4 / 5;
+}
+
+.firstComponent p {
+    width: 90%;
+    font-size: 20px;
+}
+
+.firstComponent img.abc {
+    width: 320px;
+    height: fit-content;
+}
+
+.firstComponent .redesSociais {
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+    margin-left: -6rem;
+}
+
+.fourthComponent .singleMessage {
+    display: flex;
+    flex-direction: row;
+    gap: .35rem;
+}
