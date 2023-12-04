@@ -15,6 +15,8 @@
     src: url(./assets/fonts/Lateef-Regular.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;1,6..12,1000&family=Roboto+Flex:opsz@8..144&display=swap');
+
 :root {
     --titulo-principal:  #ECA316;
     --titulo-secundário: #2AC785;
@@ -28,39 +30,13 @@
 
 body {
     display: grid;
+    overflow-x: hidden;
     grid-template-columns: minmax(15px, 70px) 1fr minmax(15px,70px);
-    background-color: #EDEDED;
+    /* background-color: #EDEDED; */
 }
 
 body > * {
     grid-column: 2 / 3;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav ul li {
-    font-family: Judson-Bold;
-    color: var(--titulo-terciarios);
-    text-transform: uppercase;
-    padding: .1rem .8rem;
-    border: 3px solid transparent;
-    font-size: 25.6px;
-    border-radius: 4px;
-}
-
-nav ul li:hover {
-    border-bottom: 3px solid var(--titulo-principal);
-    cursor: pointer;
 }
 
 main {
@@ -86,6 +62,7 @@ section.sec1 {
 
 .homeArticle > * {
     grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 .blackBGHome {
@@ -104,9 +81,8 @@ section.sec1 {
 .flexContent h2,
 .flexContent span,
 .flexContent p {
-    color: #EDEDED ;
-    filter: drop-shadow(2px, 4px, 10px,rgba(0,0,0,25%));
-    font-family: Judson-Regular;
+    color: #ddd ;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 .flexContent h1 {
@@ -115,13 +91,465 @@ section.sec1 {
     margin-bottom: -3rem;
 }
 
+.flexContent h2 {
+    font-size: calc(100% + 2px);
+    font-weight: 100;
+}
+
 .flexContent p {
-    font-size: 14px;
+    font-size: calc(100% + 1px);
 }
 
 .flexContent {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 1.3rem;
+    margin-bottom: 6.2rem;
 }
 
+.flex-home-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.legila {
+    display: flex;
+    gap: .4rem;
+}
+
+.legila span {
+    color: #e09c18;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 700;
+}
+
+.flexContent button {
+    all: unset;
+    background-color: #0d005c;
+    color: #fff;
+    padding: 1rem 3.2rem;
+    justify-self: start;
+    align-self: flex-start;
+    border-radius: 15px;
+    font-family: Judson-Regular;
+    font-weight: 400;
+    font-size: calc(100% + 9px);
+}
+
+.sec1 img {
+    position: absolute;
+    bottom: -25%;
+    right: 12%;
+    width: 200px;
+    height: auto;
+}
+
+.contentsUnder {
+    display: flex;
+    gap: 2rem;
+}
+
+.contentsUnder .content1,
+.contentsUnder .content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 400px;
+}
+
+.contentsUnder h1 {
+    text-transform: uppercase;
+    font-family: Judson-Bold;
+    color: #06002E;
+}
+
+.contentsUnder p {
+    width: 90%;
+    font-family: 'Roboto Flex', sans-serif;
+    color: #06002E;
+}
+
+.contentsUnder .linhaVerde {
+    width: 3px;
+    height: 103px;
+    background-color: #2ac785;
+    border-radius: 500%;
+    justify-self: center;
+    align-self: center;
+    text-align: justify;
+    margin-left: -3.5rem;
+}
+
+.contentsUnder .content1 h1 {
+    margin-top: 1.2rem;
+}
+
+.sec2 {
+    grid-column: 1 / 4;
+    background-image: url(./assets/imgs/Background_Sobre.png);
+    display: flex;
+    background-size: 1360px auto;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.flex-sobre-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.flex-sobre-1 h1 {
+    color: #EDEDED;
+    font-family: Lateef-Regular;
+    font-size: calc(100% + 50px);
+}
+
+.flex-sobre-1 h3 {
+    color: #ECA316;
+    font-size: calc(100% + 8px);
+    margin-top: -1.5rem;
+}
+
+.flex-sobre-2 {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.flex-sobre-2 > * {
+    grid-column: 2 / 3;
+}
+
+.flex-sobre-2:first-child,
+.flex-sobre-2:last-child {
+    color: #EDEDED;
+    font-family: 'Roboto Flex', sans-serif;
+    text-align: justify;
+    width: 90%;
+}
+
+.flex-sobre-2 .nossa-missao {
+    color: #0E794C;
+    border-bottom: 1px solid #2AC785;
+    justify-self: start;
+    font-size: calc(100% + 4px);
+}
+
+.divisor-sobre {
+    grid-column: 1 / 4;
+    width: 1360px;
+    height: auto;
+}
+
+
+.sec3 .title-beneficios {
+    text-transform: uppercase;
+    color: #06002E;
+    font-family: Lateef-Regular, sans-serif;
+    text-align: center;
+    font-size: calc(100% + 20px);
+}
+
+.sec3 .group-of-div-sec3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div {
+    width: 400px;
+    background-color: #e2dede;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    padding: 1rem 0;
+    border-radius: 10px;
+    transition: .4s;
+    position: relative;
+}
+
+.beneficios-div::after {
+    content: "";
+    background-color: #0E794C;
+    width: 150px;
+    height: 170px;
+    position: absolute;
+    top: -2.5%;
+    left: 65%;
+    display: block;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.beneficios-div::before {
+    content: "";
+    background-color: #0E794C;
+    width: 150px;
+    height: 170px;
+    position: absolute;
+    top: 59%;
+    left: -2.5%;
+    display: block;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div:hover {
+    transform: scale(1.04);
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div > * {
+    grid-column: 2 / 3;
+}
+
+.sec3 .group-of-div-sec3 div img {
+    width: 70px;
+    height: 70px;
+}
+
+.sec3 .group-of-div-sec3 .title-div-beneficios h1 {
+    color: #06002E;
+    font-family: Judson-Bold, sans-serif;
+    margin-top: 1rem;
+}
+
+.sec3 .group-of-div-sec3 .title-div-beneficios h3 {
+    color: #0E794C;
+    margin-top: -.3rem;
+    margin-left: 1.2rem;
+}
+
+
+.sec3 .group-of-div-sec3 div p {
+    margin-top: 2rem;
+    font-family: 'Roboto Flex', sans-serif;
+    color: #06002E;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div .saiba-mais {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div .saiba-mais button {
+    all: unset;
+    color: #06002E;
+    font-family: Judson-Bold;
+    border-bottom: 3px solid transparent;
+    font-size: calc(100% + 10px);
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div .saiba-mais button:hover {
+    border-bottom: 3px solid #ECA316;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div .saiba-mais img {
+    width: 45px;
+    height: auto;
+    margin-top: .4rem;
+    transition: .3s;
+}
+
+.sec3 .group-of-div-sec3 .beneficios-div .saiba-mais img:hover {
+    transform: translateX(10px);
+}
+
+.square1,
+.square2 {
+    background-color: #0E794C;
+}
+
+.sec4 {
+    grid-column: 1 / 4;
+    background-image: url(./assets/imgs/Rectangle12.png);
+    background-size: 1360px auto;
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows: 330px 1fr;
+}
+
+.div-faq {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq {
+    border-bottom: 1px solid #D9D9D9;
+    padding: 0 0 .8rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq h1 {
+    font-family: Judson-Regular;
+    color: #06002E;
+}
+
+.faq p {
+    color: #06002E;
+    font-family: 'Roboto Flex', sans-serif;
+    display: none;
+}
+
+.title-faq {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#faq {
+    justify-self: start;
+    align-self: flex-start;
+    margin-left: 5.5rem;
+    font-size: calc(100% + 10px);
+}
+
+.flex-column-title-faq {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(100% + 20px);
+}
+
+.flex-row-title-faq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .8rem;
+}
+
+.title-flex-perguntas-imagens {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-flex-perguntas-imagens img {
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.title-flex-perguntas-imagens h1 {
+    grid-column: 1 / 2;
+}
+
+.p-ativo {
+    display: block !important;
+    animation: sla .5s forwards;
+}
+
+@keyframes sla {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-30px,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.fale-conosco {
+    justify-content: center;
+    display: flex;
+    gap: .7rem;
+}
+
+.fale-conosco .title-conosco {
+    color: #ECA316;
+}
+
+.fale-conosco .title-conosco,
+.fale-conosco .title-duvida {
+    font-family: Judson-Regular, sans-serif;
+}
+
+.sec5 {
+    background-image: url(./assets/imgs/Rectangle17.png);
+    background-size: 1360px auto;
+    background-repeat: no-repeat;
+    margin-top: 10rem;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+}
+
+.sec5 img {
+    width: 650px;
+    height: auto;
+    margin-top: -8.5rem;
+    margin-right: -2rem;
+}
+
+.sec5 .texto-chamada {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -6rem;
+    margin-right: -6rem;
+}
+
+.texto-parte-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-parte-1 h1 {
+    font-size: calc(100% + 50px);
+    color: #ECA316;
+    font-family: Lateef-Regular;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+.texto-parte-1 h2,
+.texto-parte-2 h2 {
+    margin-top: -1.1rem;
+    font-family: 'Roboto-Flex', sans-serif;
+    font-size: calc(100% + 10px);
+    color: #EDEDED;
+}
+
+.texto-parte-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.jogo-de-palavras-1,
+.jogo-de-palavras-2 {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogo-de-palavras-1 .title-cadastro {
+    color: #0E794C;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.jogo-de-palavras-2 .title-aqui {
+    color: #0E794C;
+}

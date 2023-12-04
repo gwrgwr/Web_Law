@@ -6,34 +6,19 @@ teste.forEach((e) => {
   }
 })
 
-const entrar = document.querySelector('.bg-blue button')
-const bgBlue = document.querySelector('.bg-blue')
-const bgTrans = document.querySelector('.bg-transparent')
-const newBgBlue = document.querySelector('.divFormChangedBlue')
-const newBgTrans = document.querySelector('.divFormChangedTransparent')
-const divForms = document.querySelector('.divForms')
-const barra = document.querySelector('.linhaBranca')
-entrar.addEventListener('click', () => {
-  if(divForms.classList.contains('ativar')) {
-    divForms.classList.remove('ativar')
-    bgBlue.remove(bgBlue.children)
-    bgTrans.remove(bgTrans.children)
-    barra.before(newBgBlue)
-    barra.after(newBgTrans)
-    newBgBlue.style.display = 'flex'
-    newBgTrans.style.display = 'flex'
+const img = document.querySelectorAll('.title-flex-perguntas-imagens img')
+const divOfImg = document.querySelectorAll('.title-flex-perguntas-imagens')
+const p = document.querySelectorAll('.faq p')
+
+console.log(p)
+function accordList() {
+  if(this.parentElement.parentElement.children[1].classList.contains('p-ativo')) {
+    this.parentElement.parentElement.children[1].classList.remove('p-ativo')
+  } else {
+    this.parentElement.parentElement.children[1].classList.add('p-ativo')
   }
+}
+
+img.forEach((item) => {
+  item.addEventListener('click', accordList)
 })
-
-const registrar = document.querySelector('.divFormChangedBlue button')
-registrar.addEventListener('click', () => {
-  divForms.classList.add('ativar')
-  divForms.replaceChild(bgTrans, newBgTrans)
-  divForms.replaceChild(bgBlue, newBgBlue)
-  barra.after(bgBlue)
-  barra.before(bgTrans)
-})
-
-console.log(registrar)
-
-
